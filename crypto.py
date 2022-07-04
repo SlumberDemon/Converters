@@ -6,9 +6,9 @@ while True:
         "Type the Crypto currency you wish to convert \n (Bitcoin/Ethereum/Tether/Binance) \n > "
     )
     if choice in crypto:
-        value = int(input("Enter conversion amount \n > "))
-        if int(value) == value:
-            conversion = value * amount[crypto.index(choice)]
+        value = input("Enter conversion amount \n > ")
+        if value.isdigit():
+            conversion = int(value) * amount[crypto.index(choice)]
             print(f"$ {value} | {choice} {conversion}")
             break
         else:
